@@ -1,0 +1,10 @@
+So
+
+I am using the Odin api to access data about properties at my work.
+
+I have obviously removed some data but the call goes to where we store data about certain sites, uses the authentication token I generated with a post request
+and then access the information
+
+I have not finished the program but I eventually want to have the xl function working so that I can it puts all the data into an xl sheet nice and neatly
+
+Beacuse that really is automation, and it was really great to make useful calls to the API that actually have relevance to a task I was doing!
