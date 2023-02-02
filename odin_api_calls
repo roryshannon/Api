@@ -1,0 +1,136 @@
+import requests
+
+from openpyxl import Workbook, load_workbook
+
+ 
+
+'''url = url/api/v2/service-providers/enterprise-trunks/available-trunk-groups?serviceProviderId=****
+#https://doc.odinapi.net
+ 
+
+payload={}
+
+headers = {
+
+  'Authorization': 'Bearer ********
+}
+
+ 
+
+response1 = requests.request("GET", url, headers=headers, data=payload)
+
+ 
+
+print(response1.text)
+
+
+'''
+
+#next vvv
+
+ 
+
+url = url/api/v2/service-providers/trunk-groups/call-capacity?serviceProviderId=****
+
+ 
+
+payload={}
+
+headers = {
+
+  'Authorization': 'Bearer ********
+}
+
+ 
+
+response2 = requests.request("GET", url, headers=headers, data=payload)
+
+ 
+
+print(response2.text)
+
+ 
+
+#next vvv
+
+ 
+
+url = url/api/v2/groups/trunk-groups/call-capacity?groupId=****&serviceProviderId=****
+
+ 
+
+payload={}
+
+headers = {
+
+  'Authorization': 'Bearer ********
+}
+
+ 
+
+response3 = requests.request("GET", url, headers=headers, data=payload)
+
+ 
+
+print(response3.text)
+
+ 
+
+#next vvv
+
+ 
+
+url = url/api/v2/groups/trunk-groups?serviceProviderId=****&groupId=****&name=****
+
+ 
+
+payload={}
+
+headers = {
+
+  'Authorization': 'Bearer ********
+}
+
+ 
+
+response4 = requests.request("GET", url, headers=headers, data=payload)
+
+ 
+
+#print(type(response.text))
+
+ 
+
+maxActiveCalls = response4.json()["maxActiveCalls"]
+
+enableBursting = response4.json()["enableBursting"]
+
+burstingMaxActiveCalls = response4.json()["burstingMaxActiveCalls"]
+
+print(maxActiveCalls)
+
+print(enableBursting)
+
+print(burstingMaxActiveCalls)
+
+ 
+
+ 
+
+wb = load_workbook("Rory.xlsx")
+
+ws = wb.active
+
+ 
+
+ws.title = "Data"
+
+ 
+
+ws.append(["test","test"])
+
+ 
+
+#wb.save('Rory.xlxs')
+
+#https://www.youtube.com/watch?v=7YS6YDQKFh0
